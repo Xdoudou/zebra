@@ -100,3 +100,10 @@ hr {
 input, select {
     vertical-align:middle;
 }
+input[type=button]{
+    outline: none;
+    -webkit-appearance: button;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: 0;
+}
