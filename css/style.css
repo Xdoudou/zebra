@@ -182,13 +182,21 @@ html,body{
     left: -66px;
     top: -38px;
 }
-.answer-page-face{
+.answer-page1-face{
     width: 148px;
     height: 200px;
     background: url(../img/face-icon1.png)no-repeat;
     position: absolute;
     bottom: -216px;
     left: 72px;
+    transition:all 1s;
+    transform: translate3d(0px,0px,0.01px);
+    opacity: 0;
+    z-index: 5;
+}
+.answer-page1-face-active{
+    opacity: 1;
+    transform: translate3d(50px,-100px,0.01px);
 }
 .answer-page-boytopic{
     width: 495px;
@@ -280,6 +288,14 @@ html,body{
     position: absolute;
     top: -211px;
     left: 104px;
+    transition:all 1s;
+    transform: translate3d(0px,0px,0.01px);
+    opacity: 0;
+    z-index: 5;
+}
+.answer-page2-face-active{
+    opacity: 1;
+    transform: translate3d(-50px,100px,0.01px);
 }
 .answer-page3-paging{
     background: url(../img/answer-3.png)no-repeat;
@@ -297,6 +313,14 @@ html,body{
     position: absolute;
     left: 253px;
     bottom: -297px;
+    transition:all 1s;
+    transform: translate3d(0px,0px,0.01px);
+    opacity: 0;
+    z-index: 5;
+}
+.answer-page3-face-active{
+    opacity: 1;
+    transform: translate3d(-100px,-100px,0.01px);
 }
 .answer-page2-girltopic,.answer-page4-girltopic,.answer-page5-girltopic{
     width: 370px;
@@ -359,7 +383,15 @@ html,body{
     background: url(../img/face-icon4.png)no-repeat;
     position: absolute;
     top: 28px;
-    left: 446px;
+    left: 446px;   
+    transition:all 1s;
+    transform: translate3d(0px,0px,0.01px);
+    opacity: 0;
+    z-index: 5;
+}
+.answer-page4-face-active{
+    opacity: 1;
+    transform: translate3d(-340px,0px,0.01px);
 }
 .answer-page5-face{
     width: 224px;
@@ -368,6 +400,14 @@ html,body{
     position: absolute;
     top: -217px;
     left: 102px;
+    transition:all 1s;
+    transform: translate3d(0px,0px,0.01px);
+    opacity: 0;
+    z-index: 5;
+}
+.answer-page5-face-active{
+    opacity: 1;
+    transform: translate3d(-50px,300px,0.01px);
 }
 .answer-page5-boytopic{
     text-indent: 0;
@@ -381,6 +421,56 @@ html,body{
 }
 .answer-page5-girlanswer{
     text-indent: 50px;
+}
+/* 问答页面动画 */
+/* 男 */
+.ani-boy{
+    transition: all 1s;
+    transform: translateX(-157px);
+    opacity: 0;
+}
+.ani-slide .ani-boy{
+    transform: translateX(0px);
+    opacity: 1;
+}
+/* 女 */
+.ani-girl{
+    transition: all 1s;
+    transform: translateX(216px);
+    opacity: 0;
+}
+.ani-slide .ani-girl{
+    transform: translateX(0px);
+    opacity: 1;
+}
+/* 页码 */
+.ani-paging{
+    transition: all 1s;
+    transform: scale(0.5);
+    opacity: 0;
+}
+.ani-slide .ani-paging{
+    transform: scale(1);
+    opacity: 1;
+}
+.ani-boytopic{
+    transition-delay:.8s !important;
+}
+.ani-girltopic{
+    transition-delay:1.6s !important;
+}
+.ani-boyanswer{
+    transition-delay:2.4s !important;
+}
+.ani-girlanswer{
+    transition-delay:3.2s !important;
+}
+.ani-boytopic,.ani-girltopic,.ani-boyanswer,.ani-girlanswer{
+    transition: all 1s;
+    opacity: 0;
+}
+.ani-slide .ani-boytopic,.ani-slide .ani-girltopic,.ani-slide .ani-boyanswer,.ani-slide .ani-girlanswer{
+    opacity: 1;
 }
 .result-boy1-wrapper{
     background: #fff url(../img/boy11.png)no-repeat center center;
@@ -414,6 +504,9 @@ html,body{
 	line-height: 30px;
 	letter-spacing: 0px;
     color: #373737; 
+    transition: all 1s;
+    transform: translateY(200px);
+    opacity: 0;
 }
 .result-btn-wrapper{
     position: absolute;
@@ -422,6 +515,14 @@ html,body{
     width: 678px;
     height: 76px;
     font-size: 0;
+    transition: all 1s;
+    transform: translateY(200px);
+    opacity: 0;
+}
+
+.ani-slide .result-save,.ani-slide .result-btn-wrapper{
+    transform: translateY(0px);
+    opacity: 1;
 }
 .result-homepage{
     display: inline-block;
