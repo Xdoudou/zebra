@@ -86,13 +86,26 @@ html,body{
 .homePage-but{
     width: 411px;
     height: 80px;
-    background: url(../img/homePage-but1.png)no-repeat;
-    margin-top: 33px;
-    outline: none;
-    border: 0;
+    background: url(../img/homePage-but.png)no-repeat;
+    margin: 33px auto 0;
     transition: all 1s;
     opacity: 0;
-    transform: scale(0.5)
+    transform: scale(0.5);
+    position: relative;
+}
+homePage-but1{
+    background: transparent;
+    outline: none;
+    border: 0;
+}
+.home-icon{
+    display: block;
+    position: absolute;
+    width: 71px;
+    height: 52px;
+    background: url(../img/hand.png) no-repeat;
+    top: 14px;
+    left: 20px;
 }
 .ani-slide .homePage-but{
     transition-delay:4s;
@@ -404,7 +417,7 @@ html,body{
     position: absolute;
     left: 50%;
     margin-left: -101px;
-    bottom: 18.66%;
+    bottom: 20%;
     width: 202px;
 	height: 22px;
 	font-family: HYb1gj;
@@ -526,7 +539,7 @@ html,body{
 .information-name,.information-phone,.information-province{
     width: 425px;
     height: 74px;
-    margin: 0 0 20px 40px;
+    margin: 0 auto 20px;
     font-size: 0;
     box-sizing: border-box;
 }
@@ -577,4 +590,31 @@ select{
 .information-province select:nth-child(1){
     margin-left: -2px;
     margin-right: 8px;
+}
+.information-agreen{
+    width: 256px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.agreen-icon{
+    display: inline-block;
+    width: 28px;
+    height: 30px;
+    background: url(../img/agreen-icon.png) no-repeat;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+.information-submit{
+    width:203px;
+    height: 64px;
+    margin: 38px auto 0;
+    background: url(../img/submit-icon.png) no-repeat;
+}
+.information-submit input{
+    border: none;
+    outline: none;
+    width: 203px;
+    height: 60px;
+    background: transparent;
 }
