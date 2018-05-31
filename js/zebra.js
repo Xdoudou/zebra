@@ -73,7 +73,7 @@ function switchItem() {
         return false;
     }
     off = false;
-    var url = "url(./img/shape" + ($(this).index() + 1) + ".png)no-repeat left center",
+    var url = "url(./img/shape" + ($(this).index() + 1) + ".png)no-repeat left top",
         befUrl = $(this).css('background')
     index = mySwiperZebra.activeIndex - 2,
         oThis = $(this);
@@ -106,7 +106,7 @@ $('.click-boyanswer5 li').click(function () {
         return false;
     }
     off = false;
-    var url = "url(./img/shape" + ($(this).index() + 1) + ".png)no-repeat left center",
+    var url = "url(./img/shape" + ($(this).index() + 1) + ".png)no-repeat left top",
         index = mySwiperZebra.activeIndex - 2,
         befUrl = $(this).css('background')
     oIdex = $(this).index(),
