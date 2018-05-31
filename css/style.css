@@ -24,6 +24,15 @@ html,body{
     margin-top: -102px;
     height: 204px;
 }
+.loading-car{
+    margin-left: 250px;
+    /* transform: translateX(-196px); */
+}
+/* loding汽车动效 */
+.loading-car-active{
+    transition: all linear 1s;
+    transform: translateX(-194px);
+}
 .loading-line{
     height:10px;
     background: url(../img/loading-line.png)no-repeat center center;
@@ -34,8 +43,14 @@ html,body{
     font-size: 30px;
     color: #3c3c3c;
 }
+/* 首页背景图动效 */
 .homePage-wrapper{
+    transition: 1s;
     background: url(../img/home-page-bg1.png)no-repeat center center;
+}
+.ani-slide .homePage-wrapper{
+    transition-delay:.8s;
+    background: url(../img/home-page-bg.png)no-repeat center center;
 }
 .homePage-content{
     width: 100%;
@@ -45,19 +60,44 @@ html,body{
     top: 50%;
     margin-top: -383px;
 }
-.homePage-content p{
+/* 首页文字动效 */
+.homePage-p1,.homePage-p2,.homePage-p3{
     margin-bottom: 24px;
     line-height: 72px;
     font-size: 36px;
     color: #373737;
     font-weight: bold;
+    transition: all 1s;
+    opacity: 0;
 }
+.ani-slide .homePage-p1{
+    transition-delay:1.6s;
+}
+.ani-slide .homePage-p2{
+    transition-delay:2.4s;
+}
+.ani-slide .homePage-p3{
+    transition-delay:3.2s;
+}
+.ani-slide .homePage-p1,.ani-slide .homePage-p2,.ani-slide .homePage-p3{
+    opacity: 1;
+}
+/* 首页按钮动效 */
 .homePage-but{
     width: 411px;
     height: 80px;
     background: url(../img/homePage-but1.png)no-repeat;
+    margin-top: 33px;
     outline: none;
     border: 0;
+    transition: all 1s;
+    opacity: 0;
+    transform: scale(0.5)
+}
+.ani-slide .homePage-but{
+    transition-delay:4s;
+    opacity: 1;
+    transform: scale(1)
 }
 .gender-wrapper{
     background:#e8edef url(../img/choose-bg.png)no-repeat center center;
@@ -70,26 +110,49 @@ html,body{
     margin-top: -446px;
     overflow: hidden;
 }
+/* 选择男女-男动画 */
 .gender-boy{
     float: left;
     width: 237px;
     height: 774px;
     background: url(../img/boy-bg.png)no-repeat;
     margin-left: 110px;
+    transition:all 1s;
+    transform: translateX(-360px);
+    opacity: 0;
 }
+.ani-slide .gender-boy{
+    transform: translateX(0);
+    opacity: 1;
+}
+/* 选择男女-女动画 */
 .gender-girl{
     float: right;
     width: 276px;
     height: 774px;
     background: url(../img/girl-bg.png)no-repeat left bottom;
     margin-right: 85px;
+    transition: all 1s;
+    transform: translateX(365px);
+    opacity: 0;
 }
+.ani-slide .gender-girl{
+    transform: translateX(0px);
+    opacity: 1;
+}
+/* 选择男女-按钮动画 */
 .gender-boy-but,.gender-girl-but{
     width: 133px;
     height: 77px;
     background: url(../img/btn-boy1.png)no-repeat;
     margin-top: 40px;
     margin-left: 168px;
+    transition: all 1s;
+    opacity: 0;
+}
+.ani-slide .gender-boy-but,.ani-slide .gender-girl-but{
+    transition-delay:1s;
+    opacity: 1;
 }
 .gender-girl-but{
     background: url(../img/btn-girl2.png)no-repeat;
