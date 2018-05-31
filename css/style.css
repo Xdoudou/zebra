@@ -9,7 +9,7 @@ html,body{
     width: 100%;
     height: 100%;;
 }
-.loading-wrapper,.homePage-wrapper,.gender-wrapper,.answer-wrapper,.result-wrapper,.share-wrapper,.active-wrapper,.information-wrapper{
+.loading-wrapper,.homePage-wrapper,.gender-wrapper,.answer-wrapper,.result-wrapper,.share-wrapper,.active-wrapper,.information-wrapper,.result-boy1-wrapper,.result-boy2-wrapper,.result-boy3-wrapper,.result-girl1-wrapper,.result-girl2-wrapper,.result-girl3-wrapper{
     width: 100%;
     height: 100%;
 }
@@ -263,7 +263,7 @@ html,body{
     bottom: -250px;
     
 }
-.answer-page2-paging,.answer-page3-paging{
+.answer-page2-paging,.answer-page3-paging,.answer-page4-paging,.answer-page5-paging{
     width: 87px;
     height: 87px;
     position: absolute;
@@ -284,6 +284,12 @@ html,body{
 .answer-page3-paging{
     background: url(../img/answer-3.png)no-repeat;
 }
+.answer-page4-paging{
+    background: url(../img/answer-4.png)no-repeat;
+}
+.answer-page5-paging{
+    background: url(../img/answer-5.png)no-repeat;
+}
 .answer-page3-face{
     width: 244px;
     height: 252px;
@@ -292,7 +298,7 @@ html,body{
     left: 253px;
     bottom: -297px;
 }
-.answer-page2-girltopic{
+.answer-page2-girltopic,.answer-page4-girltopic,.answer-page5-girltopic{
     width: 370px;
     height: 99px;
     line-height: 86px;
@@ -300,9 +306,11 @@ html,body{
     margin-bottom: 40px;
     margin-left: 160px;
     color: #737373;
+}
+.answer-page2-girltopic{
     text-indent: 74px;
 }
-.answer-page2-boyanswer{
+.answer-page2-boyanswer,.answer-page4-boyanswer{
     width: 558px;
     height: 298px;
     background: url(../img/bubble3.png)no-repeat;
@@ -312,13 +320,13 @@ html,body{
     padding: 30px 26px 34px 62px;
     box-sizing: border-box;
 }
-.answer-page2-boyanswer li{
+.answer-page2-boyanswer li,.answer-page4-boyanswer li{
     list-style: none;
     padding-left: 42px;
     line-height: 31px;
     box-sizing: border-box;
 }
-.answer-page2-boyanswer li:nth-child(1){
+.answer-page2-boyanswer li:nth-child(1),.answer-page4-boyanswer li:nth-child(1){
     background: url(../img/shape1-2.png)no-repeat left 5px;
     margin-bottom: 28px;
 }
@@ -326,7 +334,7 @@ html,body{
     background: url(../img/shape2-2.png)no-repeat left center;
     margin-bottom: 50px;
 }
-.answer-page2-boyanswer li:nth-child(3){
+.answer-page2-boyanswer li:nth-child(3),.answer-page4-boyanswer li:nth-child(3){
     background: url(../img/shape3-2.png)no-repeat left 5px;
 }
 .answer-page2-girlanswer{
@@ -334,4 +342,239 @@ html,body{
 }
 .answer-page3-girlanswer{
     font-size: 24px;
+}
+.answer-page4-girltopic{
+    text-indent: 122px;
+}
+.answer-page4-boyanswer li:nth-child(2){
+    background: url(../img/shape2-2.png)no-repeat left 5px;
+    margin-bottom: 25px;
+}
+.answer-page4-girlanswer{
+    text-indent: 142px;
+}
+.answer-page4-face{
+    width: 160px;
+    height: 220px;
+    background: url(../img/face-icon4.png)no-repeat;
+    position: absolute;
+    top: 28px;
+    left: 446px;
+}
+.answer-page5-face{
+    width: 224px;
+    height: 197px;
+    background: url(../img/face-icon5.png)no-repeat;
+    position: absolute;
+    top: -217px;
+    left: 102px;
+}
+.answer-page5-boytopic{
+    text-indent: 0;
+    padding: 8px 34px 0 70px;
+    font-size: 26px;
+    line-height: 30px; 
+    box-sizing: border-box;
+}
+.answer-page5-girltopic{
+    text-indent: 134px;
+}
+.answer-page5-girlanswer{
+    text-indent: 50px;
+}
+.result-boy1-wrapper{
+    background: #fff url(../img/boy11.png)no-repeat center center;
+}
+.result-boy2-wrapper{
+    background: #fff url(../img/boy22.png)no-repeat center center;
+}
+.result-boy3-wrapper{
+    background: #fff url(../img/boy33.png)no-repeat center center;
+}
+.result-girl1-wrapper{
+    background: #fff url(../img/girl11.png)no-repeat center center;
+}
+.result-girl2-wrapper{
+    background: #fff url(../img/girl22.png)no-repeat center center;
+}
+.result-girl3-wrapper{
+    background: #fff url(../img/girl33.png)no-repeat center center;
+}
+.result-save{
+    position: absolute;
+    left: 50%;
+    margin-left: -101px;
+    bottom: 18.66%;
+    width: 202px;
+	height: 22px;
+	font-family: HYb1gj;
+	font-size: 22px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 30px;
+	letter-spacing: 0px;
+    color: #373737; 
+}
+.result-btn-wrapper{
+    position: absolute;
+    bottom: 12.33%;
+    margin-left: 36px;
+    width: 678px;
+    height: 76px;
+    font-size: 0;
+}
+.result-homepage{
+    display: inline-block;
+    vertical-align: top;
+    width: 252px;
+    height: 81px;
+    background: url(../img/mind-btn.png) no-repeat;
+    margin-right: 13px;
+}
+.result-active{
+    display: inline-block;
+    vertical-align: top;
+    background: url(../img/active-btn.png) no-repeat;
+    width: 150px;
+    height: 81px;
+    margin-right: 12px;
+}
+.result-join{
+    display: inline-block;
+    vertical-align: top;
+    background: url(../img/join-btn.png) no-repeat;
+    width: 251px;
+	height: 81px;
+}
+.share-wrapper,.active-wrapper,.information-wrapper{
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.share-wrapper{
+    background: rgba(0, 0, 0, 0.75);
+}
+.share-content{
+    position: absolute;
+    top: 224px;
+    right: 112px;
+    width: 313px;
+    height: 246px;
+    background: url(../img/share-icon.png) no-repeat;
+}
+.active-wrapper,.information-wrapper{
+    background: rgba(0, 0, 0, 0.45);
+}
+.avtive-content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 660px;
+    height: 945px;
+    margin: auto;
+    background: url(../img/bulletin-icon.png) no-repeat;
+}
+.active-car{
+    position: absolute;
+    width: 344px;
+    height: 220px;
+    left: 20px;
+    background: url(../img/car-icon.png) no-repeat;
+}
+.information-content{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 507px;
+    height: 861px;
+    margin: auto;
+    background: url(../img/textarea-bg.png) no-repeat;
+}
+.information-car{
+    position: absolute;
+    width: 346px;
+    height: 209px;
+    right: -100px;
+    bottom: 0;
+    background: url(../img/car-infor.png) no-repeat;
+}
+.information-title{
+    width: 378px;
+    height: 82px;
+    font-family: HYb1gj;
+    font-size: 37px;
+    line-height: 47px;
+    font-weight: bold;
+    text-align: center;
+    margin: 58px auto 0;
+}
+.information-text{
+    width: 418px;
+    font-family: HYb1gj;
+    font-size: 22px;
+    line-height: 36px;
+    text-align: center;
+    margin: 18px auto 26px;
+}
+.information-name,.information-phone,.information-province{
+    width: 425px;
+    height: 74px;
+    margin: 0 0 20px 40px;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.information-name,.information-phone{
+    padding-left: 70px;
+}
+.information-name{
+    background: url(../img/name-input.png) no-repeat;
+}
+.information-phone{
+    background: url(../img/phone-input.png) no-repeat;
+}
+.information-name label,.information-phone label{
+    display: inline-block;
+    width: 54px;
+    line-height: 74px;
+    font-size: 27px;
+}
+.information-name input,.information-phone input{
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 27px;
+    font-size: 27px;
+    width: 286px;
+    height: 60px;
+    padding: 10px;
+    background: #99c0f9;
+    margin-bottom: 15px;
+}
+select::-ms-expand{ display: none; }
+/* --火狐、谷歌清除--*/
+select{
+     appearance:none;  
+    -moz-appearance:none;  
+    -webkit-appearance:none;
+}
+.information-province select{
+    background: url(../img/select-icon.png) no-repeat;
+    border: none;
+    width: 207px;
+    height: 74px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    outline: none;
+    font-size: 27px;
+}
+.information-province select:nth-child(1){
+    margin-left: -2px;
+    margin-right: 8px;
 }

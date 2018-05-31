@@ -15,6 +15,15 @@ var mySwiperAnswer = new Swiper('.answer-wrapper', {
     }
 })
 
+// 结果切换
+var mySwiperAnswer = new Swiper('.result-wrapper', {
+    direction: 'horizontal',
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    }
+})
+
 // loding动画
 var lodingText = 0,
     oLoadingCar = document.querySelector('.loading-car'),
