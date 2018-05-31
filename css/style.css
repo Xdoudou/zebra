@@ -93,7 +93,7 @@ html,body{
     transform: scale(0.5);
     position: relative;
 }
-homePage-but1{
+.homePage-but1{
     background: transparent;
     outline: none;
     border: 0;
@@ -106,6 +106,37 @@ homePage-but1{
     background: url(../img/hand.png) no-repeat;
     top: 14px;
     left: 20px;
+    animation-name:myhand;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:5s;
+	animation-iteration-count:infinite;
+	animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name:myhand;
+	-webkit-animation-duration:1s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:5s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-play-state:running;
+}
+/* 手指动画 */
+@keyframes myhand
+{
+	0%   {left:20px;}
+    25%  {left:30px;}
+    50%  {left:15px;}
+    75%  {left:30px;}
+	100% {left:20px;}
+}
+
+@-webkit-keyframes myhand /* Safari and Chrome */
+{
+    0%   {left:20px;}
+    25%  {left:30px;}
+    50%  {left:15px;}
+    75%  {left:30px;}
+	100% {left:20px;}
 }
 .ani-slide .homePage-but{
     transition-delay:4s;
@@ -157,18 +188,83 @@ homePage-but1{
 .gender-boy-but,.gender-girl-but{
     width: 133px;
     height: 77px;
-    background: url(../img/btn-boy1.png)no-repeat;
     margin-top: 40px;
     margin-left: 168px;
     transition: all 1s;
     opacity: 0;
+    background-size: 100% 100%;
 }
 .ani-slide .gender-boy-but,.ani-slide .gender-girl-but{
     transition-delay:1s;
     opacity: 1;
 }
+.gender-boy-but{
+    background: url(../img/btn-boy1.png)no-repeat;
+    animation-name:myboy;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:3s;
+	animation-iteration-count:infinite;
+	animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name:myboy;
+	-webkit-animation-duration:1.5s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:3s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-play-state:running;
+}
 .gender-girl-but{
     background: url(../img/btn-girl2.png)no-repeat;
+    animation-name:mygirl;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-delay:3s;
+	animation-iteration-count:infinite;
+	animation-play-state:running;
+	/* Safari and Chrome: */
+	-webkit-animation-name:mygirl;
+	-webkit-animation-duration:1.5s;
+	-webkit-animation-timing-function:linear;
+	-webkit-animation-delay:3s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-play-state:running;
+}
+/* 按钮男动画 */
+@keyframes myboy
+{
+	0%   {transform: scale(1)}
+	25%  {transform: scale(0.9)}
+	50%  {transform: scale(1)}
+	75%  {transform: scale(0.9)}
+	100% {transform: scale(1)}
+}
+
+@-webkit-keyframes myboy /* Safari and Chrome */
+{
+	0%   {transform: scale(1)}
+	25%  {transform: scale(0.9)}
+	50%  {transform: scale(1)}
+	75%  {transform: scale(0.9)}
+	100% {transform: scale(1)}
+}
+/* 按钮女动画 */
+@keyframes mygirl
+{
+	0%   {transform: scale(0.9)}
+	25%  {transform: scale(1)}
+	50%  {transform: scale(0.9)}
+	75%  {transform: scale(1)}
+	100% {transform: scale(0.9)}
+}
+
+@-webkit-keyframes mygirl /* Safari and Chrome */
+{
+	0%   {transform: scale(0.9)}
+	25%  {transform: scale(1)}
+	50%  {transform: scale(0.9)}
+	75%  {transform: scale(1)}
+	100% {transform: scale(0.9)}
 }
 .answer-page1,.answer-page2,.answer-page3,.answer-page4,.answer-page5{
     width: 100%;
@@ -240,13 +336,13 @@ homePage-but1{
     margin-bottom: 54px;
 }
 .answer-page-boyanswer li:nth-child(1){
-    background: url(../img/shape1-2.png)no-repeat left center;
+    background: url(../img/shape1-2.png)no-repeat left top;
 }
 .answer-page-boyanswer li:nth-child(2){
-    background: url(../img/shape2-2.png)no-repeat left center;
+    background: url(../img/shape2-2.png)no-repeat left top;
 }
 .answer-page-boyanswer li:nth-child(3){
-    background: url(../img/shape3-2.png)no-repeat left center;
+    background: url(../img/shape3-2.png)no-repeat left top;
 }
 .answer-page-girlanswer{
     text-indent: 20px;
@@ -340,15 +436,15 @@ homePage-but1{
     box-sizing: border-box;
 }
 .answer-page2-boyanswer li:nth-child(1),.answer-page4-boyanswer li:nth-child(1){
-    background: url(../img/shape1-2.png)no-repeat left 5px;
+    background: url(../img/shape1-2.png)no-repeat left top;
     margin-bottom: 28px;
 }
 .answer-page2-boyanswer li:nth-child(2){
-    background: url(../img/shape2-2.png)no-repeat left center;
+    background: url(../img/shape2-2.png)no-repeat left top;
     margin-bottom: 50px;
 }
 .answer-page2-boyanswer li:nth-child(3),.answer-page4-boyanswer li:nth-child(3){
-    background: url(../img/shape3-2.png)no-repeat left 5px;
+    background: url(../img/shape3-2.png)no-repeat left top;
 }
 .answer-page2-girlanswer{
     text-indent: 45px;
@@ -360,7 +456,7 @@ homePage-but1{
     text-indent: 122px;
 }
 .answer-page4-boyanswer li:nth-child(2){
-    background: url(../img/shape2-2.png)no-repeat left 5px;
+    background: url(../img/shape2-2.png)no-repeat left top;
     margin-bottom: 25px;
 }
 .answer-page4-girlanswer{
@@ -397,9 +493,11 @@ homePage-but1{
 }
 .result-boy1-wrapper{
     background: #fff url(../img/boy11.png)no-repeat center center;
+    position: relative;
 }
 .result-boy2-wrapper{
     background: #fff url(../img/boy22.png)no-repeat center center;
+    position: relative;
 }
 .result-boy3-wrapper{
     background: #fff url(../img/boy33.png)no-repeat center center;
@@ -413,11 +511,40 @@ homePage-but1{
 .result-girl3-wrapper{
     background: #fff url(../img/girl33.png)no-repeat center center;
 }
+.result-boy1-wrapper::before,.result-boy2-wrapper::before,.result-girl2-wrapper::before,.result-girl3-wrapper::before{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 62px;
+    bottom: 0px;
+}
+.result-boy1-wrapper::before{
+    background: #e0d7d7;
+}
+.result-boy2-wrapper::before{
+    background: #d6d9dd;
+}
+.result-girl2-wrapper::before{
+    background: #c8c4d5;
+}
+.result-girl3-wrapper::before{
+    background: #f3eeb4;
+}
+.result-girl1-wrapper::before{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 62px;
+    top: 0px;
+    background: #f1e3fa;
+}
 .result-save{
     position: absolute;
     left: 50%;
     margin-left: -101px;
-    bottom: 20%;
+    bottom: 17.77%;
     width: 202px;
 	height: 22px;
 	font-family: HYb1gj;
@@ -430,7 +557,7 @@ homePage-but1{
 }
 .result-btn-wrapper{
     position: absolute;
-    bottom: 12.33%;
+    bottom: 10%;
     margin-left: 36px;
     width: 678px;
     height: 76px;
