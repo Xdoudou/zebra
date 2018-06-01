@@ -78,6 +78,7 @@ function switchItem() {
     index = mySwiperZebra.activeIndex - 2,
         oThis = $(this);
 
+    this.style.background = url;
     //改变css样式
     $(this).css({
         "color": "#f54b24",
@@ -112,6 +113,7 @@ $('.click-boyanswer5 li').click(function () {
     oIdex = $(this).index(),
         oThis = $(this);
 
+    this.style.background = url;
     //改变css样式
     $(this).css({
         "color": "#f54b24",
@@ -152,3 +154,52 @@ $('.click-boyanswer5 li').click(function () {
 
 
 })
+
+//重启脑洞
+$('.result-homepage').click(
+    function () {
+        Switch(1);
+    }
+)
+
+//活动详情打开
+$('.result-active').click(function () {
+    $('.active-wrapper').addClass('alert-active');
+    $('.active-car').addClass('active-car-active');
+})
+//活动详情关闭
+$('.active-wrapper').click(function () {
+    $(this).addClass('alert-leave');
+    setTimeout(function () {
+        $('.active-wrapper').removeClass('alert-active');
+        $('.active-wrapper').removeClass('alert-leave');
+        $('.active-car').removeClass('active-car-active');
+    }, 800)
+})
+
+//加入反套路联盟打开
+$('.result-join').click(function () {
+    $('.information-wrapper').addClass('alert-active');
+    $('.information-car').addClass('information-car-active');
+})
+//加入反套路联盟关闭
+$('.information-wrapper').click(function () {
+    $('.information-wrapper').addClass('alert-leave');
+    setTimeout(function () {
+        $('.information-wrapper').removeClass('alert-active');
+        $('.information-wrapper').removeClass('alert-leave');
+        $('.information-car').removeClass('information-car-active');
+    }, 800)
+})
+
+// 长按分享
+// $('.result-boy1-wrapper').taphold(function () {
+//     $('.share-wrapper').addClass('alert-active');
+// })
+
+// oShare.addEventListener('mousedown',function () {
+//     console.log(1)
+//     setTimeout(function () {
+//         $('.share-wrapper').addClass('alert-active');
+//     },500)
+// })
