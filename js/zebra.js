@@ -155,6 +155,7 @@ $('.click-boyanswer5 li').click(function () {
 $('.result-homepage').click(
     function () {
         Switch(1);
+        return false;
     }
 )
 
@@ -162,24 +163,37 @@ $('.result-homepage').click(
 $('.result-active').click(function () {
     $('.active-wrapper').addClass('alert-active');
     $('.active-car').addClass('active-car-active');
+    return false;
 })
 //活动详情关闭
-$('.active-wrapper').click(function () {
-    $(this).addClass('alert-leave');
+$('.active-close').click(function () {
+    $('.active-wrapper').addClass('alert-leave');
     setTimeout(function () {
         $('.active-wrapper').removeClass('alert-active');
         $('.active-wrapper').removeClass('alert-leave');
         $('.active-car').removeClass('active-car-active');
     }, 800)
 })
+//选择框
+var off_select=true;
+$(".agreen-icon").click(function(){
+    if(off_select){
+        $(".agreen-icon").css("background","url(./img/agreen-icon1.png) no-repeat");
+        off_select=false;
+    }else{
+        $(".agreen-icon").css("background","url(./img/agreen-icon.png) no-repeat");
+        off_select=true;
+    }
+})
 
 //加入反套路联盟打开
 $('.result-join').click(function () {
     $('.information-wrapper').addClass('alert-active');
     $('.information-car').addClass('information-car-active');
+    return false;
 })
 //加入反套路联盟关闭
-$('.information-wrapper').click(function () {
+$('.information-submit').click(function () {
     $('.information-wrapper').addClass('alert-leave');
     setTimeout(function () {
         $('.information-wrapper').removeClass('alert-active');
@@ -189,11 +203,22 @@ $('.information-wrapper').click(function () {
 })
 
 // 长按分享
-$('.result-wrapper').on('touchstart', function () {
-    setTimeout(function () {
-        $('.share-wrapper').addClass('alert-active');
-    }, 1000)
-})
+$.fn.longPress = function(fn) {
+    var timeout = undefined;
+    var $this = this;
+    for(var i = 0;i<$this.length;i++){
+        $this[i].addEventListener('touchstart', function(event) {
+            timeout = setTimeout(fn, 1000);  //长按时间超过800ms，则执行传入的方法
+            }, false);
+        $this[i].addEventListener('touchend', function(event) {
+            clearTimeout(timeout);  //长按时间少于800ms，不会执行传入的方法
+            }, false);
+    }
+}
+$('.result-wrapper').longPress(function(){
+    //do something...
+    $('.share-wrapper').addClass('alert-active');
+});
 
 $('.share-wrapper').on('touchstart', function () {
     $('.share-wrapper').addClass('alert-leave');

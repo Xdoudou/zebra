@@ -749,6 +749,15 @@ html,body{
     opacity: 1;
     transform: translate3d(0px,0px,0px);
 }
+.active-close{
+    position: absolute;
+    display: block;
+    right: 50px;
+    top: 172px;
+    width: 55px;
+    height: 55px;
+    background: url(../img/close-icon.png) no-repeat;
+}
 .information-content{
     position: absolute;
     top: 0;
@@ -857,8 +866,8 @@ select{
     display: inline-block;
     width: 28px;
     height: 30px;
-    background: url(../img/agreen-icon.png) no-repeat;
     vertical-align: text-bottom;
+    background: url(../img/agreen-icon.png) no-repeat;
     margin-right: 5px;
     margin-top: 5px;
 }
