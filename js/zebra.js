@@ -4,18 +4,14 @@ var mySwiperZebra = new Swiper('.zebra-wrapper', {
     effect: 'fade',
     fadeEffect: {
         crossFade: true,
-    }
+    },
+    noSwiping: true,
 })
 
-// 结果切换
-var mySwiperAnswer = new Swiper('.result-wrapper', {
-    direction: 'horizontal',
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true,
-    }
-})
-
+var aSlide = document.querySelectorAll('.swiper-slide');
+for (var i = 0; i < aSlide.length; i++) {
+    aSlide[i].classList.add('swiper-no-swiping')
+}
 // loding动画
 var lodingText = 0,
     oLoadingCar = document.querySelector('.loading-car'),
@@ -193,13 +189,16 @@ $('.information-wrapper').click(function () {
 })
 
 // 长按分享
-// $('.result-boy1-wrapper').taphold(function () {
-//     $('.share-wrapper').addClass('alert-active');
-// })
+$('.result-wrapper').on('touchstart', function () {
+    setTimeout(function () {
+        $('.share-wrapper').addClass('alert-active');
+    }, 1000)
+})
 
-// oShare.addEventListener('mousedown',function () {
-//     console.log(1)
-//     setTimeout(function () {
-//         $('.share-wrapper').addClass('alert-active');
-//     },500)
-// })
+$('.share-wrapper').on('touchstart', function () {
+    $('.share-wrapper').addClass('alert-leave');
+    setTimeout(function () {
+        $('.share-wrapper').removeClass('alert-active');
+        $('.share-wrapper').removeClass('alert-leave');
+    }, 800)
+})

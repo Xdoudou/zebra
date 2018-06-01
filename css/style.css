@@ -1,13 +1,17 @@
 html,body{
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
     margin: 0 auto;
-    background: #fff8d4;
+    background: #dbd2a1;
 }
 .zebra-wrapper{
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+.swiper-wrapper{
     overflow: hidden;
 }
 .loading-wrapper,.homePage-wrapper,.gender-wrapper,.answer-wrapper,.result-wrapper,.share-wrapper,.active-wrapper,.information-wrapper,.result-boy1-wrapper,.result-boy2-wrapper,.result-boy3-wrapper,.result-girl1-wrapper,.result-girl2-wrapper,.result-girl3-wrapper{
